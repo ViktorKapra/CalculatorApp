@@ -10,7 +10,11 @@ namespace GitExercise
             "m - Multiply",
             "pow - Power",
             "log - Logarithm",
-            "fact - Sum of 2 fatorials"
+            "fact - Sum of 2 fatorials",
+            "dr - Divide Remainder",
+            "ex - Exit",
+            "d - Devide ",
+            "sabs - Subtract Abs"
         };
 
         public static void Add(double a, double b)
@@ -44,11 +48,24 @@ namespace GitExercise
         private static long CalculateFact(int a)
         {
             long result = a;
-            for(int i=a-1;i>=1;i--)
+            for (int i = a - 1; i >= 1; i--)
             {
                 result = result * i;
             }
             return result;
+        }
+        public static void DivideRemainder(double a, double b)
+        {
+            Console.WriteLine($"{a} % {b} = {a % b}");
+        }
+        public static void Divide(double a, double b)
+        {
+            Console.WriteLine($"{a} : {b} = {a / b}");
+        }
+
+        public static void SubtractAbs(double a, double b)
+        {
+            Console.WriteLine($"|{a} - {b}| = {Math.Abs(a - b)}");
         }
     }
 }
